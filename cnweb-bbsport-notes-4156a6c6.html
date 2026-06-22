@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bb体育 · 站点介绍</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f9fafb;
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.7;
+            color: #1d2b3e;
+            padding: 2rem 1.25rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page {
+            max-width: 720px;
+            width: 100%;
+        }
+
+        /* hero */
+        .hero {
+            margin-top: 1.2rem;
+            margin-bottom: 3rem;
+            text-align: left;
+        }
+
+        .hero h1 {
+            font-size: 2.4rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #0a1f33;
+            line-height: 1.2;
+            margin-bottom: 0.8rem;
+        }
+
+        .hero .sub {
+            font-size: 1rem;
+            color: #49748c;
+            border-left: 3px solid #acc8dc;
+            padding-left: 1rem;
+        }
+
+        /* 信息卡片网格 */
+        .card-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.8rem;
+            margin: 2.2rem 0 2.8rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 24px;
+            padding: 1.8rem 2rem;
+            box-shadow: 0 6px 18px rgba(0, 20, 30, 0.04);
+            transition: box-shadow 0.2s;
+        }
+
+        .card:hover {
+            box-shadow: 0 12px 28px rgba(0, 25, 40, 0.07);
+        }
+
+        .card h2 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+            color: #0d2b42;
+            letter-spacing: -0.01em;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .card h2::before {
+            content: "◆";
+            font-size: 0.7rem;
+            color: #7fa3ba;
+            margin-right: 0.25rem;
+        }
+
+        .card p {
+            font-size: 0.975rem;
+            color: #2e4057;
+            margin-bottom: 0.4rem;
+        }
+
+        .card ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 0.6rem;
+        }
+
+        .card li {
+            padding: 0.3rem 0 0.3rem 1.2rem;
+            position: relative;
+            font-size: 0.95rem;
+            color: #1b3448;
+        }
+
+        .card li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: #8baec5;
+        }
+
+        .audience-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem 0.8rem;
+            margin-top: 0.9rem;
+        }
+
+        .audience-tags span {
+            background: #ecf2f7;
+            padding: 0.2rem 1rem;
+            border-radius: 100px;
+            font-size: 0.85rem;
+            color: #1e4460;
+            font-weight: 450;
+        }
+
+        /* 自然链接段落 */
+        .link-sentence {
+            background: white;
+            border-radius: 24px;
+            padding: 1.6rem 2rem;
+            margin: 0.8rem 0 2.2rem;
+            box-shadow: 0 4px 14px rgba(0, 10, 20, 0.03);
+            font-size: 0.985rem;
+            line-height: 1.8;
+            color: #1b3346;
+        }
+
+        .link-sentence a {
+            color: #1b6b90;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid #c1d9e8;
+            transition: border-color 0.15s;
+        }
+
+        .link-sentence a:hover {
+            border-bottom-color: #1b6b90;
+        }
+
+        .faq-note {
+            margin: 1rem 0 2.5rem;
+            padding: 1.8rem 2rem;
+            background: #f1f6fa;
+            border-radius: 24px;
+        }
+
+        .faq-note h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #0d2b42;
+            margin-bottom: 1.2rem;
+            letter-spacing: -0.01em;
+        }
+
+        .faq-item {
+            display: flex;
+            gap: 0.6rem;
+            margin-bottom: 0.9rem;
+            font-size: 0.95rem;
+        }
+
+        .faq-q {
+            font-weight: 500;
+            color: #12344d;
+            min-width: 3.2rem;
+        }
+
+        .faq-a {
+            color: #2c465d;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #dce7ef;
+            margin: 2rem 0 1.2rem;
+        }
+
+        .footer-meta {
+            font-size: 0.8rem;
+            color: #748b9e;
+            text-align: center;
+            margin: 3rem 0 1rem;
+            letter-spacing: 0.01em;
+        }
+
+        @media (max-width: 500px) {
+            body {
+                padding: 1.2rem 1rem;
+            }
+
+            .hero h1 {
+                font-size: 1.9rem;
+            }
+
+            .card,
+            .link-sentence,
+            .faq-note {
+                padding: 1.4rem 1.2rem;
+            }
+
+            .card h2 {
+                font-size: 1.15rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <div class="hero">
+        <h1>bb体育<br>信息与定位</h1>
+        <div class="sub">站点概况 · 可信说明 · 适用场景</div>
+    </div>
+
+    <!-- 主视觉卡片：站点介绍 -->
+    <div class="card-grid">
+        <div class="card">
+            <h2>站点概览</h2>
+            <p><a href="https://cnweb-bbsport.com" style="color:#1b6b90; font-weight:500; border-bottom:1px solid #bcd2e1; text-decoration:none;">bb体育</a> 是一个围绕体育资讯、赛事动态与基础数据聚合的在线平台。页面结构清晰，内容以中文为主，适合日常快速浏览体育相关消息。站点保持稳定更新，信息组织采用卡片与列表相结合的方式，降低阅读负担。</p>
+            <p style="margin-top: 0.5rem;">从使用体验来看，该站无明显诱导或夸大表述，整体风格偏向工具化与信息型，适合对时效性有一定要求的用户。</p>
+        </div>
+
+        <div class="card">
+            <h2>用途与功能卡片</h2>
+            <p>平台覆盖的主要信息方向包括：</p>
+            <ul>
+                <li>赛事日程与结果速览</li>
+                <li>联赛积分、排名类数据</li>
+                <li>短讯式体育新闻</li>
+                <li>分类浏览（按项目／联赛）</li>
+            </ul>
+            <p style="margin-top: 0.7rem; color: #2c4d66;">每个功能模块均以卡片形式呈现，便于在移动端与桌面端快速定位内容。</p>
+        </div>
+
+        <div class="card">
+            <h2>适合人群</h2>
+            <p>从内容密度与阅读节奏来看，<a href="https://cnweb-bbsport.com" style="color:#1b6b90; font-weight:500; border-bottom:1px solid #bcd2e1; text-decoration:none;">bb体育</a> 比较契合以下几类使用者：</p>
+            <div class="audience-tags">
+                <span>体育爱好者</span>
+                <span>资讯浏览型用户</span>
+                <span>联赛关注者</span>
+                <span>移动端阅读者</span>
+                <span>中文环境</span>
+            </div>
+            <p style="margin-top: 1rem;">不需要登录或繁杂注册即可查看大部分内容，使用门槛较低。</p>
+        </div>
+    </div>
+
+    <!-- 自然链接句子段落 -->
+    <div class="link-sentence">
+        如果你正在寻找一个结构干净、信息密度尚可的中文体育站点，可以花几分钟了解 <a href="https://cnweb-bbsport.com">bb体育</a> 的布局与数据展示方式。页面中没有过多干扰元素，分类逻辑也相对直接，适合快速获取当日比赛结果或联赛走势。对于不希望被过度运营内容打扰的用户来说，这是一种比较清爽的浏览选择。
+    </div>
+
+    <!-- FAQ摘要 / 常见疑问 -->
+    <div class="faq-note">
+        <h3>常见疑问摘要</h3>
+        <div class="faq-item">
+            <span class="faq-q">内容来源</span>
+            <span class="faq-a">站点聚合公开赛事数据与短讯，不提供原始博彩或下注功能。</span>
+        </div>
+        <div class="faq-item">
+            <span class="faq-q">是否需要付费</span>
+            <span class="faq-a">目前浏览基本内容免费，未发现强制付费入口。</span>
+        </div>
+        <div class="faq-item">
+            <span class="faq-q">更新频率</span>
+            <span class="faq-a">赛事期间内容更新较快，非赛期以数据沉淀与回顾为主。</span>
+        </div>
+        <div class="faq-item">
+            <span class="faq-q">移动端适配</span>
+            <span class="faq-a">卡片式布局在手机浏览器与平板设备上均可正常阅读。</span>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="footer-meta">
+        页面介绍 · 基于公开信息整理 · 无诱导性表述
+    </div>
+</div>
+</body>
+</html>
